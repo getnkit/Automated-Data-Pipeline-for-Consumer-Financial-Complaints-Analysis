@@ -9,6 +9,9 @@ The dataset contains real-world complaints about financial products and services
 **Step 1:** Data profiling with Python\
 **Step 2:** Store profiled data into Cloud Storage\
 **Step 3:** Create a database on Cloud SQL and move data from Google Storage to dataset tables\
+\
+![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/3b3164c16dffff0fc610b350650dd795cee9de06/images/Sample%20Table.png)\
+\
 **Step 4:** Create Cloud Composer environment\
 **Step 5:** Create a table within a dataset on BigQuery\
 **Step 6:** Run Python script to automated ETL pipeline\
