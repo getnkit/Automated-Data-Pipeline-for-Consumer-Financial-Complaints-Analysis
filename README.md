@@ -6,8 +6,8 @@ The dataset contains real-world complaints about financial products and services
 ## Architecture
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/1aae4c7285eaed59480fda3a933bd6ad14cd1346/images/Data%20Architecture.png)
 ## Implementation
-**Step 1:** Data profiling with Python\
-**Step 2:** Store profiled data into Cloud Storage\
+**Step 1:** Data profiling with Python using Google Colab\
+**Step 2:** Import profiled data into Cloud SQL(MySQL) using Python scropt\
 **Step 3:** Create a database on Cloud SQL and move data from Google Storage to dataset tables\
 \
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/3b3164c16dffff0fc610b350650dd795cee9de06/images/Sample%20Table.png)\
