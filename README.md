@@ -1,6 +1,6 @@
-# Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis
+# Automated-Data-Pipeline-for-Consumer-Financial-Complaints-Analysis
 ## Project Overview
-This project automates an ETL pipeline using Python. Data is first profiled (reviewed and cleansed) before being loaded into Cloud SQL. Cloud Composer, managing Apache Airflow on GCP, orchestrates the pipeline to transform the data from Cloud SQL and load it into BigQuery. Finally, Looker Studio visualizes the data.
+This project automates an Data pipeline using Python. Data is first profiled (reviewed and cleansed) before being loaded into Cloud SQL. Cloud Composer, managing Apache Airflow on GCP, orchestrates the pipeline to transform the data from Cloud SQL and load it into BigQuery. Finally, Looker Studio visualizes the data.
 ## About Dataset
 The dataset contains real-world complaints about financial products and services, with attributes such as product type, issue description, company response, and metadata. This diverse complaints data is the input source for the ETL pipeline and data visualization.
 ## Architecture
