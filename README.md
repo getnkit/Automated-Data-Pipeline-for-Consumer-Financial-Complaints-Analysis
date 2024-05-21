@@ -1,14 +1,14 @@
 During Implementation...
 # Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis
 ## Project Overview
-This project automates an Data pipeline using Python. Data is first profiled (reviewed and cleansed) before being loaded into Cloud SQL. Cloud Composer, managing Apache Airflow on GCP, orchestrates the pipeline to transform the data from Cloud SQL and load it into BigQuery. Finally, Looker Studio visualizes the data.
+This project focuses on building and automating a Python ETL pipeline with Airflow. Before ingesting data into the automated data pipeline, it undergoes Data Profiling (review and cleansing) and is then uploaded to Cloud SQL (MySQL) using a Python script. Subsequently, the automated data pipeline extracts data from MySQL, transforms the data, and loads it into Google Cloud Storage (GCS) to ingest the data into BigQuery. Finally, a Consumer Financial Complaints Dashboard is developed using Looker Studio.
 ## About Dataset
-The dataset contains real-world complaints about financial products and services, with attributes such as product type, issue description, company response, and metadata. This diverse complaints data is the input source for the ETL pipeline and data visualization.
+This dataset consists of real-world complaints about financial products and services, including details such as product type, issue description, company response, and other metadata. These complaints are published after the company responds, or after 15 days from the date of receipt, whichever comes first. By voicing their opinions and complaints, consumers help improve the quality and efficiency of the financial marketplace.
 ## Architecture
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/1aae4c7285eaed59480fda3a933bd6ad14cd1346/images/Data%20Architecture.png
 ## Implementation
-### Step 1: Data profiling using Python on Google Colab\
-### Step 2: Import profiled data into Cloud SQL(MySQL) using Python script\
+### Step 1: Data profiling using Python on Google Colab
+### Step 2: Import profiled data into Cloud SQL(MySQL) using Python script
 - **Imports necessary modules:** Uses configparser for reading configuration files and pandas for data manipulation.
 - **Specifies the configuration file path:** Defines the path to the configuration file containing database connection details.
 - **Parses the configuration file:** Reads the configuration file to extract database connection parameters.
@@ -16,10 +16,10 @@ The dataset contains real-world complaints about financial products and services
 - **Constructs the database URI:** Builds the connection URI for the MySQL database using the retrieved details.
 - **Reads data from CSV files:** Loads data into Pandas DataFrames.
 - **Imports data into the MySQL database:** Writes the DataFrames to the corresponding tables in the MySQL database, replacing the existing data if the tables already exist.
-### Step 3: Preparation to create bucket on Google Cloud Storage (GCS) and dataset on BigQuery\
-### Step 4: Implementing Python DAG in Airflow\
+### Step 3: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for ETL pipeline
+### Step 4: Create Python DAG in Airflow
 **Step 4.1:** Importing Modules
-- To import necessary modules and libraries for the DAG.
+- Import necessary modules and libraries for the DAG.
 
 **Step 4.2:** Extract Data from MySQL
 - Connects to a MySQL database using MySqlHook.
@@ -27,10 +27,9 @@ The dataset contains real-world complaints about financial products and services
 - Saves these DataFrames as CSV files in the specified directory.
 
 **Step 4.3:** Transform Data
-- Connects to a MySQL database using MySqlHook.
 - Reads the previously saved CSV files into Pandas DataFrames.
 - Converts necessary columns to string type to ensure proper merging.
-- Merges the two DataFrames based on the state code and abbreviation.
+- Merges the two DataFrames.
 - Drops redundant columns and rearranges the columns.
 - Saves the transformed DataFrame as a CSV file in the specified directory.
 
@@ -51,7 +50,6 @@ The dataset contains real-world complaints about financial products and services
 - Sets the start date to one day ago and schedules the DAG to run once (@once).
 - Tags the DAG with "financial", "mysql", and "bigquery".
 
-### Step 5: Trigger Python DAG to automated ETL data pipeline\
-### Step 6: Developed Consumer Financial Complaints Dashboard using Looker Studio with BigQuery plug-in.
+### Step 5: Developed Consumer Financial Complaints Dashboard using Looker Studio connected to a Google BigQuery table
 
 
