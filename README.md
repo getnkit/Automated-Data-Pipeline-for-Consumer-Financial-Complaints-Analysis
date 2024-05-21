@@ -49,6 +49,8 @@ This dataset consists of real-world complaints about financial products and serv
 - Defines the DAG name.
 - Sets the start date to one day ago and schedules the DAG to run once (@once).
 - Tags the DAG with "financial", "mysql", and "bigquery".
+- Creating Tasks: PythonOperator is used to call a python function inside your DAG.
+- Setting up Dependencies: Set the dependencies or the order in which the tasks should be executed.
 
 ### Step 5: Developed Consumer Financial Complaints Dashboard using Looker Studio connected to a Google BigQuery table
 
