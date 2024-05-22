@@ -55,5 +55,6 @@ This dataset consists of real-world complaints about financial products and serv
 ### Step 5: Run DAG files in Airflow Webserver, which runs on Docker
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/40443b93862cb87771b83e513496b4bab184abfa/images/ETL%20Pipeline%20with%20Airflow.png)
 ### Step 6: Developed Consumer Financial Complaints Dashboard using Looker Studio connected to a Google BigQuery table
+[Go to my Dashboard](https://lookerstudio.google.com/reporting/7131c112-d054-4413-8024-be2db94ff83b)
 
 
