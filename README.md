@@ -51,7 +51,8 @@ This dataset consists of real-world complaints about financial products and serv
 - Tags the DAG with "financial", "mysql", and "bigquery".
 - Create task specifies an individual step in a workflow.
 - Set up dependencies or the order in which tasks should be executed.
-
+  
+![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/ca6a7d1b2a0f54284ee19404cb414ceadb16b5fd/images/ETL%20pipeline%20with%20Airflow.png)
 ### Step 5: Developed Consumer Financial Complaints Dashboard using Looker Studio connected to a Google BigQuery table
 
 
