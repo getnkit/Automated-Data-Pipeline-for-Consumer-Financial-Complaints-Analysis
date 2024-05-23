@@ -1,4 +1,4 @@
-# Automated-Data-Pipeline-for-Consumer-Financial-Complaints-Analysis
+# End-to-End-Data-Pipeline-for-Consumer-Financial-Complaints
 ## Project Overview
 This project focuses on building and automating a Python ETL pipeline with Airflow. Before ingesting data into the automated data pipeline, it undergoes Data Profiling (review and cleansing) and is then uploaded to Cloud SQL (MySQL) using a Python script. Subsequently, the automated data pipeline extracts data from MySQL, transforms the data, and loads it into Google Cloud Storage (GCS) to ingest the data into BigQuery. Finally, a Consumer Financial Complaints Dashboard is developed using Looker Studio.
 ## About Dataset
