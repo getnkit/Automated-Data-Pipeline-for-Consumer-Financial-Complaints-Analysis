@@ -9,6 +9,7 @@ This dataset consists of real-world complaints about financial products and serv
 ### Step 1: Data profiling using Python on Google Colab
 ### Step 2: Set up a Virtual Environment in Python
 ### Step 3: Import profiled data into Cloud SQL(MySQL) using Python script
+#### About Python script
 - **Imports necessary modules:** Uses configparser for reading configuration files and pandas for data manipulation.
 - **Specifies the configuration file path:** Defines the path to the configuration file containing database connection details.
 - **Parses the configuration file:** Reads the configuration file to extract database connection parameters.
