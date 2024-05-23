@@ -1,4 +1,4 @@
-# Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis
+# Automated-Data-Pipeline-for-Consumer-Financial-Complaints-Analysis
 ## Project Overview
 This project focuses on building and automating a Python ETL pipeline with Airflow. Before ingesting data into the automated data pipeline, it undergoes Data Profiling (review and cleansing) and is then uploaded to Cloud SQL (MySQL) using a Python script. Subsequently, the automated data pipeline extracts data from MySQL, transforms the data, and loads it into Google Cloud Storage (GCS) to ingest the data into BigQuery. Finally, a Consumer Financial Complaints Dashboard is developed using Looker Studio.
 ## About Dataset
@@ -18,7 +18,7 @@ This dataset consists of real-world complaints about financial products and serv
 - **Reads data from CSV files:** Loads data into Pandas DataFrames.
 - **Imports data into the MySQL database:** Writes the DataFrames to the corresponding tables in the MySQL database, replacing the existing data if the tables already exist.
 
-### Step 4: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for ETL pipeline
+### Step 4: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for Data pipeline
 ### Step 5: Set up Connection & Variables in Airflow
 ### Step 6: Create Python DAG in Airflow
 **Step 6.1:** Importing Modules
