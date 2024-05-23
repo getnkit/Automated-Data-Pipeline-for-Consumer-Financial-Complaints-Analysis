@@ -19,9 +19,9 @@ def extract_from_mysql():
     df1 = pd.read_sql("SELECT * FROM consumer_data_profiled LIMIT 100000", con=conn)
     df2 = pd.read_sql("SELECT * FROM state_name_profiled", con=conn)
 
-    # Warning! Avoid using XComs Backend for passing big data. 
-    # Airflow, as an orchestrator, cannot efficiently handle big data processing like Spark
-    # The maximum data size of XComs in Airflow depends on the database used (For MySQL, it is 64 KB)
+    # Warning! Avoid using XComs Backend for passing big data,
+    # because Airflow, as an orchestrator, cannot efficiently handle big data processing like Spark.
+    # The maximum data size of XComs in Airflow depends on the database used (for MySQL, it is 64 KB).
     df1.to_csv("/opt/airflow/dags/consumer_data_profiled.csv", index=False)
     df2.to_csv("/opt/airflow/dags/state_name_profiled.csv", index=False)
 
