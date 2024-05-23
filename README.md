@@ -18,8 +18,8 @@ This dataset consists of real-world complaints about financial products and serv
 - **Reads data from CSV files:** Loads data into Pandas DataFrames.
 - **Imports data into the MySQL database:** Writes the DataFrames to the corresponding tables in the MySQL database, replacing the existing data if the tables already exist.
 
-### Step 4: Set up Connection & Variables in Airflow
-### Step 5: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for ETL pipeline
+### Step 4: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for ETL pipelineSet up Connection & Variables in Airflow
+### Step 5: Set up Connection & Variables in Airflow
 ### Step 6: Create Python DAG in Airflow
 **Step 6.1:** Importing Modules
 - Import necessary modules and libraries for the DAG.
