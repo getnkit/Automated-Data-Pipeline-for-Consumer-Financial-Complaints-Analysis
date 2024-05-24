@@ -4,7 +4,7 @@ This project focuses on building and automating a Python ETL pipeline with Airfl
 ## About Dataset
 This dataset consists of real-world complaints about financial products and services, including details such as product type, issue description, company response, and other metadata. These complaints are published after the company responds, or after 15 days from the date of receipt, whichever comes first. By voicing their opinions and complaints, consumers help improve the quality and efficiency of the financial marketplace.
 ## Architecture
-![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/6b4f65c2430bc17d4b98fd647810c5b0b4847f9a/images/Data%20Architecture.png)
+![image](https://github.com/getnkit/End-to-End-Data-Pipeline-for-Consumer-Financial-Complaints/blob/41e0d2c06f3f04a0bed133cfa111eaab6dbd6a02/images/Data%20Architecture.png)
 ## Implementation
 ### Step 1: Data profiling using Python on Google Colab
 ### Step 2: Set up a Virtual Environment in Python
