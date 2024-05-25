@@ -21,7 +21,7 @@ This dataset consists of real-world complaints about financial products and serv
 ### Step 4: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for Data pipeline
 ### Step 5: Set up Connection & Variables in Airflow
 ### Step 6: Create Python DAG in Airflow
-**Step 6.1:** Importing Modules
+**Step 6.1: Importing Modules**
 - Import necessary modules and libraries for the DAG.
 
 **Step 6.2: Extract Data from MySQL**
@@ -29,26 +29,26 @@ This dataset consists of real-world complaints about financial products and serv
 - Fetches data from two tables and loads them into Pandas DataFrames.
 - Saves these DataFrames as CSV files in the specified directory.
 
-**Step 6.3:** Transform Data
+**Step 6.3: Transform Data**
 - Reads the previously saved CSV files into Pandas DataFrames.
 - Converts necessary columns to string type to ensure proper merging.
 - Merges the two DataFrames.
 - Drops redundant columns and rearranges the columns.
 - Saves the transformed DataFrame as a CSV file in the specified directory.
 
-**Step 6.4:** Load Data to Google Cloud Storage (GCS)
+**Step 6.4: Load Data to Google Cloud Storage (GCS)**
 - Prepares Google Cloud Storage credentials from Airflow Variables.
 - Initializes a Google Cloud Storage client using the credentials.
 - Specifies the bucket name and file path for uploading the transformed CSV file.
 - Uploads the file to the specified GCS bucket and path.
 
-**Step 6.5:** Load Data from GCS to BigQuery
+**Step 6.5: Load Data from GCS to BigQuery**
 - Prepares Google BigQuery credentials from Airflow Variables.
 - Initializes a BigQuery client using the credentials.
 - Specifies the BigQuery table ID and job configuration for loading the CSV file from GCS.
 - Loads the CSV file from GCS to the specified BigQuery table, using the configured job settings (e.g., skipping the first row, auto-detecting schema, etc.).
 
-**Step 6.6:** Airflow DAG Definition
+**Step 6.6: Airflow DAG Definition**
 - Defines the DAG name.
 - Sets the start date to one day ago and schedules the DAG to run once (@once).
 - Tags the DAG with "financial", "mysql", and "bigquery".
