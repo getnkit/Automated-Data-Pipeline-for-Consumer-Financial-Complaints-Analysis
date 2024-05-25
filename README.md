@@ -1,6 +1,6 @@
 # End-to-End-Data-Pipeline-for-Consumer-Financial-Complaints
 ## Project Overview
-This project focuses on building and automating a data pipeline with Apache Airflow. Before ingesting data into the automated data pipeline, it undergoes data profiling (review and cleansing) and is then uploaded to Cloud SQL (MySQL) using a Python script. Subsequently, the automated data pipeline extracts data from MySQL, transforms the data, and loads it into Google Cloud Storage (GCS) to ingest the data into BigQuery. Finally, a Consumer Financial Complaints Dashboard is developed using Looker Studio.
+This project focuses on building and automating a data pipeline with Apache Airflow. Before ingesting data into the automated data pipeline, it undergoes data profiling (review and cleansing) and is then uploaded to Cloud SQL (MySQL) using a Python. Subsequently, the automated data pipeline extracts data from MySQL, transforms the data, and loads it into Google Cloud Storage (GCS) to ingest the data into BigQuery. Finally, a Consumer Financial Complaints Dashboard is developed using Looker Studio.
 ## About Dataset
 This dataset consists of real-world complaints about financial products and services, including details such as product type, issue description, company response, and other metadata. These complaints are published after the company responds, or after 15 days from the date of receipt, whichever comes first. By voicing their opinions and complaints, consumers help improve the quality and efficiency of the financial marketplace.
 ## Architecture
@@ -8,8 +8,8 @@ This dataset consists of real-world complaints about financial products and serv
 ## Implementation
 ### Step 1: Data profiling using Python on Google Colab
 ### Step 2: Set up a Virtual Environment in Python
-### Step 3: Import profiled data into Cloud SQL(MySQL) using Python script
-#### About Python script
+### Step 3: Import profiled data into Cloud SQL(MySQL) using Python
+#### About Python Source File
 - **Imports necessary modules:** Uses configparser for reading configuration files and pandas for data manipulation.
 - **Specifies the configuration file path:** Defines the path to the configuration file containing database connection details.
 - **Parses the configuration file:** Reads the configuration file to extract database connection parameters.
@@ -24,7 +24,7 @@ This dataset consists of real-world complaints about financial products and serv
 **Step 6.1:** Importing Modules
 - Import necessary modules and libraries for the DAG.
 
-**Step 6.2:** Extract Data from MySQL
+**Step 6.2: Extract Data from MySQL**
 - Connects to a MySQL database using MySqlHook.
 - Fetches data from two tables and loads them into Pandas DataFrames.
 - Saves these DataFrames as CSV files in the specified directory.
