@@ -87,5 +87,14 @@ docker cp <source_path> <container_id>:/opt/airflow/dags/
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/353f894f5ee36914d745e6f241f7edcf0df9276e/images/Data%20Pipeline%20with%20Airflow.png)
 ### Step 10: Create Consumer Financial Complaints Dashboard using Looker Studio
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/761e209eb5ff580afadef3da504393fcd835949a/images/Consumer%20Financial%20Complaints%20Dashboard.jpg)
+#### Insight Gained
+- 100,000 is the total number of complaints received.
+- 97.4% of responses by the bank were delivered on time.
+- Around 19,800 complaints were related to Customer Dispute Cases, which is approximately 20% of the total.
+- The top issue for consumers was 'Incorrect information on credit report', followed closely by 'Loan modification, collection, foreclosure' at a similar rate.
+- The products/services with the highest number of complaints were Mortgage, Debt collection, and Credit reporting.
+- Around 70% of the complaints were submitted via the website.
+- The majority of company responses to consumers had a status of 'Closed with explanation'.
+- For complaints arising from different states, a 'Bubble map' was created, where larger bubbles represent states with a higher number of complaints, and smaller bubbles represent states with fewer complaints. The bubble sizes range from larger to smaller, corresponding to the number of complaints.
 
 
