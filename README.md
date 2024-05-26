@@ -39,6 +39,10 @@ Configure docker-compose yaml, then run the docker-compose command to run Docker
 docker compose up airflow-init
 docker compose up
 ```
+Access to Airflow UI
+```
+http://localhost:8080/
+```
 ### Step 6: Set up Connection & Variables in Airflow
 ### Step 7: Create Python DAG in Airflow
 **Step 7.1: Importing Modules**
@@ -79,7 +83,7 @@ docker compose up
 ```
 docker cp <source_path> <container_id>:/opt/airflow/dags/
 ```
-### Step 9: Run a DAG file in the Airflow webserver
+### Step 9: Run a DAG file in the Airflow UI
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/353f894f5ee36914d745e6f241f7edcf0df9276e/images/Data%20Pipeline%20with%20Airflow.png)
 ### Step 10: Create Consumer Financial Complaints Dashboard using Looker Studio
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/761e209eb5ff580afadef3da504393fcd835949a/images/Consumer%20Financial%20Complaints%20Dashboard.jpg)
