@@ -1,4 +1,4 @@
-# End-to-End-Data-Pipeline-for-Consumer-Financial-Complaints
+# End to End Data Pipeline on GCP for Consumer Financial Complaints Analysis
 ## Project Overview
 This project focuses on building and automating a data pipeline with Apache Airflow. Before ingesting data into the automated data pipeline, it undergoes data profiling (review and cleansing) and is then uploaded to Cloud SQL (MySQL) using a Python. Subsequently, the automated data pipeline extracts data from MySQL, transforms the data, and loads it into Google Cloud Storage (GCS) to ingest the data into BigQuery. Finally, a Consumer Financial Complaints Dashboard is developed using Looker Studio.
 ## About Dataset
