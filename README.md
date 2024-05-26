@@ -19,6 +19,22 @@ This dataset consists of real-world complaints about financial products and serv
 - **Imports data into the MySQL database:** Writes the DataFrames to the corresponding tables in the MySQL database, replacing the existing data if the tables already exist.
 
 ### Step 4: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for Data pipeline
+### Step X: Install and Configure Airflow Using Docker
+Fetching docker-compose.yaml to deploy Airflow on Docker Compose
+```
+curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.9.1/docker-compose.yaml'
+```
+Create airflow folder and do the following: a) Create four folders called dags, plugins, logs and config respectively; b) Move YAML file to that directory.\
+\
+Create Dockerfile to describe how to create and build a Docker image
+```
+docker build -t custom-airflow-image:2.9.1 .
+```
+Configure docker-compose yaml and run docker-compose command to runs Docker containers based on settings described in a docker-compose.yaml file.
+```
+docker compose up airflow-init
+docker compose up
+```
 ### Step 5: Set up Connection & Variables in Airflow
 ### Step 6: Create Python DAG in Airflow
 **Step 6.1: Importing Modules**
@@ -55,9 +71,13 @@ This dataset consists of real-world complaints about financial products and serv
 - Create task specifies an individual step in a workflow.
 - Set up dependencies or the order in which tasks should be executed.
 
-### Step 7: Run DAG files in Airflow Webserver, which runs on Docker
+### Step 7: Copy a DAG file to Airflow container
+```
+docker cp <source_path> <container_id>:<destination_path>
+```
+### Step 8: Run a DAG file in the Airflow webserver
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/353f894f5ee36914d745e6f241f7edcf0df9276e/images/Data%20Pipeline%20with%20Airflow.png)
-### Step 8: Create Consumer Financial Complaints Dashboard using Looker Studio
+### Step 9: Create Consumer Financial Complaints Dashboard using Looker Studio
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/761e209eb5ff580afadef3da504393fcd835949a/images/Consumer%20Financial%20Complaints%20Dashboard.jpg)
 
 
