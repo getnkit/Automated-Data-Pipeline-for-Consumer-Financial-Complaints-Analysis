@@ -22,6 +22,8 @@ def extract_from_mysql():
     # Warning! Avoid using XComs Backend for passing big data,
     # because Airflow, as an orchestrator, cannot efficiently handle big data processing like Spark.
     # The maximum data size of XComs in Airflow depends on the database used (for MySQL, it is 64 KB).
+
+    # Uses MySqlHook to retrieve data from MySQL, then stores the data in a CSV file instead of passing it through XComs.
     df1.to_csv("/opt/airflow/dags/consumer_data_profiled.csv", index=False)
     df2.to_csv("/opt/airflow/dags/state_name_profiled.csv", index=False)
 
@@ -76,7 +78,7 @@ def load_to_gcs():
     bucket = storage_client.bucket(bucket_name)
 
     file_path = "/opt/airflow/dags/consumer_data_transformed.csv"
-    destination_blob_name = f"{BUSINESS_DOMAIN}/consumer_data_completed.csv"
+    destination_blob_name = f"{BUSINESS_DOMAIN}/consumer_data_transformed.csv"
 
     # Create a blob object that references the file to be uploaded to the bucket
     blob = bucket.blob(destination_blob_name)
@@ -88,7 +90,7 @@ def load_from_gcs_to_bigquery():
     location = "us-central1"
 
     bucket_name = Variable.get("financial_bucket")
-    destination_blob_name = f"{BUSINESS_DOMAIN}/consumer_data_completed.csv"
+    destination_blob_name = f"{BUSINESS_DOMAIN}/consumer_data_transformed.csv"
 
     # Prepare and Load Credentials to Connect to GCP Services
     # IAM roles = roles/bigquery.dataEditor, roles/bigquery.jobUser, roles/storage.objectViewer
