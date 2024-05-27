@@ -14,7 +14,7 @@ def extract_from_mysql():
     conn = mysqlserver.get_conn()
 
     # Fetch data from the tables and convert them into Pandas DataFrames
-    df1 = pd.read_sql("SELECT * FROM consumer_data_profiled LIMIT 100000", con=conn)
+    df1 = pd.read_sql("SELECT * FROM consumer_data_profiled", con=conn)
     df2 = pd.read_sql("SELECT * FROM state_name_profiled", con=conn)
 
     # Warning! Avoid using XCom Backend for passing big data,
