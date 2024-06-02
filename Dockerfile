@@ -5,5 +5,5 @@ FROM apache/airflow:2.9.1
 # Copy the requirements.txt file to /tmp/requirements.txt in the container
 COPY requirements.txt /tmp/requirements.txt
 
-RUN pip install -r /tmp/requirements.txt
-RUN pip install airflow-provider-great-expectations==0.2.7
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+RUN pip install --no-cache-dir airflow-provider-great-expectations==0.2.7
