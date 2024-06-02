@@ -18,11 +18,12 @@ Activates the Python Virtual Environment named "ENV", allowing you to work withi
 ```
 ENV\Scripts\activate
 ```
-Installs the specified Python packages in the current Python environment and Saves installed Python packages to requirements.txt.
+Installs the specified Python packages into the current Python environment and then saves a list of all installed packages to a requirements.txt file.
 ```
-pip install pandas>=2.2.2,pymysql>=1.0.2 && pip freeze > requirements.txt
+pip install pandas>=2.2.2 pymysql>=1.0.2
+pip freeze > requirements.txt
 ```
-Alternatively, packages to be installed can be directly defined in the requirements.txt file. Then, install all the Python packages listed in the requirements.txt.
+Alternatively, packages to be installed can be directly defined in the requirements.txt file. Then, install all the Python packages listed in the requirements.txt file.
 ```
 pip install -r requirements.txt
 ```
