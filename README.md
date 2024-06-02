@@ -22,10 +22,7 @@ Installs the specified Python packages in the current Python environment and Sav
 ```
 pip install pandas>=2.2.2,pymysql>=1.0.2 && pip freeze > requirements.txt
 ```
-Tips! Packages to be installed can be directly defined in the requirements.txt file.
-\
-\
-Then, installs all the Python packages listed in the requirements.txt.
+Alternatively, packages to be installed can be directly defined in the requirements.txt file. Then, install all the Python packages listed in the requirements.txt.
 ```
 pip install -r requirements.txt
 ```
