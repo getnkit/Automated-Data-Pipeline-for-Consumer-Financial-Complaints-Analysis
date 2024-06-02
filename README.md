@@ -18,15 +18,19 @@ Activates the Python Virtual Environment named "ENV", allowing you to work withi
 ```
 ENV\Scripts\activate
 ```
-Installs the specified Python package in the current Python environment.
+Installs the specified Python packages in the current Python environment and Saves installed Python packages to requirements.txt.
 ```
-pip install <python_package_name>
+pip install pandas>=2.2.2,pymysql>=1.0.2 && pip freeze > requirements.txt
 ```
-Installs all the Python packages listed in the "requirements.txt" file.
-```bash
+Tips! Packages to be installed can be directly defined in the requirements.txt file.
+\
+\
+Then, installs all the Python packages listed in the requirements.txt.
+```
 pip install -r requirements.txt
 ```
-### Step 3: Import profiled data into Cloud SQL(MySQL) using Python
+### Step 3: Create a MySQL database with Cloud SQL
+### Step 4: Import profiled data into MySQL database using Python
 #### About Python Source Code
 - **Imports necessary modules:** Uses configparser for reading configuration files and pandas for data manipulation.
 - **Specifies the configuration file path:** Defines the path to the configuration file containing database connection details.
@@ -36,8 +40,8 @@ pip install -r requirements.txt
 - **Reads data from CSV files:** Loads data into Pandas DataFrames.
 - **Imports data into the MySQL database:** Writes the DataFrames to the corresponding tables in the MySQL database, replacing the existing data if the tables already exist.
 
-### Step 4: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for Data pipeline
-### Step 5: Install and Configure Airflow Using Docker Container
+### Step 5: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for Data pipeline
+### Step 6: Install and Configure Airflow Using Docker Container
 Fetching docker-compose.yaml to deploy Airflow on Docker Compose
 ```
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.9.1/docker-compose.yaml'
@@ -61,51 +65,51 @@ Access to Airflow UI
 ```
 http://localhost:8080/
 ```
-### Step 6: Set up Connection & Variables in Airflow
-### Step 7: Create Python DAG in Airflow
-**Step 7.1: Importing Modules**
+### Step 7: Set up Connection & Variables in Airflow
+### Step 8: Create Python DAG in Airflow
+**Step 8.1: Importing Modules**
 - Import necessary modules and libraries for the DAG.
 
-**Step 7.2: Extract Data from MySQL**
+**Step 8.2: Extract Data from MySQL**
 - Connects to a MySQL database using MySqlHook.
 - Fetches data from two tables and loads them into Pandas DataFrames.
 - Saves these DataFrames as CSV files in the specified directory.
 
-**Step 7.3: Transform Data**
+**Step 8.3: Transform Data**
 - Reads the previously saved CSV files into Pandas DataFrames.
 - Converts necessary columns to string type to ensure proper merging.
 - Merges the two DataFrames.
 - Drops redundant columns and rearranges the columns.
 - Saves the transformed DataFrame as a CSV file in the specified directory.
 
-**Step 7.4: Load Data to Google Cloud Storage (GCS)**
+**Step 8.4: Load Data to Google Cloud Storage (GCS)**
 - Prepares Google Cloud Storage credentials from Airflow Variables.
 - Initializes a Google Cloud Storage client using the credentials.
 - Specifies the bucket name and file path for uploading the transformed CSV file.
 - Uploads the file to the specified GCS bucket and path.
 
-**Step 7.5: Load Data from GCS to BigQuery**
+**Step 8.5: Load Data from GCS to BigQuery**
 - Prepares Google BigQuery credentials from Airflow Variables.
 - Initializes a BigQuery client using the credentials.
 - Specifies the BigQuery table ID and job configuration for loading the CSV file from GCS.
 - Loads the CSV file from GCS to the specified BigQuery table, using the configured job settings (e.g., skipping the first row, auto-detecting schema, etc.).
 
-**Step 7.6: Airflow DAG Definition**
+**Step 8.6: Airflow DAG Definition**
 - Defines the DAG name.
 - Sets the start date to one day ago and schedules the DAG to run once (@once).
 - Tags the DAG with "financial", "mysql", and "bigquery".
 - Create task specifies an individual step in a workflow.
 - Set up dependencies or the order in which tasks should be executed.
 
-### Step 8: Copy a DAG file to Airflow container
+### Step 9: Copy a DAG file to Airflow container
 ```
 docker cp <source_path> <container_id>:/opt/airflow/dags/
 ```
-### Step 9: Run a DAG file in the Airflow UI
+### Step 10: Run a DAG file in the Airflow UI
 ![image](https://github.com/getnkit/End-to-End-Data-Pipeline-for-Consumer-Financial-Complaints/blob/6f7bab431779aaf725adf8c498b1e12103968fdc/images/Data%20Pipeline%20with%20Airflow.png)
 
 ![image](https://github.com/getnkit/End-to-End-Data-Pipeline-for-Consumer-Financial-Complaints/blob/b5fc6da3097957e44aeb9381c5c271675aec605b/images/Loaded%20data%20into%20BigQuery.png)
-### Step 10: Create Consumer Financial Complaints Dashboard using Looker Studio
+### Step 11: Create Consumer Financial Complaints Dashboard using Looker Studio
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/761e209eb5ff580afadef3da504393fcd835949a/images/Consumer%20Financial%20Complaints%20Dashboard.jpg)
 #### Insight Gained
 - 100,000 is the total number of complaints received.
