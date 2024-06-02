@@ -27,8 +27,8 @@ Alternatively, packages to be installed can be directly defined in the requireme
 ```
 pip install -r requirements.txt
 ```
-### Step 3: Create a MySQL DB with Cloud SQL
-### Step 4: Import profiled data into MySQL using Python
+### Step 3: Create a MySQL Database with Cloud SQL
+### Step 4: Import profiled data into MySQL Database using Python
 #### About Python Source Code
 - **Imports necessary modules:** Uses configparser for reading configuration files and pandas for data manipulation.
 - **Specifies the configuration file path:** Defines the path to the configuration file containing database connection details.
