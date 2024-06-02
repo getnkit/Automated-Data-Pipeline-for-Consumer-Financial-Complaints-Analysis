@@ -120,5 +120,6 @@ docker cp <source_path> <container_id>:/opt/airflow/dags/
 - Around 70% of the complaints were submitted via 'the website'.
 - The majority of company responses to consumers had a status of 'Closed with explanation'.
 - For complaints arising from different states, a 'Bubble map' was created, where larger bubbles represent states with a higher number of complaints, and smaller bubbles represent states with fewer complaints. The bubble sizes range from larger to smaller, corresponding to the number of complaints.
+### [Optional] Step 12: CI pipeline
 
 
