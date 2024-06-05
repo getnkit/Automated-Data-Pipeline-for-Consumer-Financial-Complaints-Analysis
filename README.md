@@ -120,8 +120,7 @@ After the workflow process is completed, the data will be loaded into BigQuery.
 - The majority of company responses to consumers had a status of 'Closed with explanation'.
 - For complaints arising from different states, a 'Bubble map' was created, where larger bubbles represent states with a higher number of complaints, and smaller bubbles represent states with fewer complaints. The bubble sizes range from larger to smaller, corresponding to the number of complaints.
 ### [Optional] Step 12: Create CI pipeline using GitHub Actions
-.github/workflows/
-This pipeline is triggered whenever there is a new push to the main branch of this repository.
+Create a workflow file named ```docker-image.yml``` within the ```.github/workflows/``` directory. This CI pipeline will be triggered whenever a new push is made to the main branch of the repository.
 
 ![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/dbe40347512a2795980c0c70ea6bcc1d1f3bbac7/images/CI%20Pipeline.jpg)
 After the job completes, the built Docker image will be pushed to the specified Docker Hub repository.
