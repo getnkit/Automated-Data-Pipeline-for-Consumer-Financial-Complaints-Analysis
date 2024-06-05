@@ -90,11 +90,11 @@ http://localhost:8080/
 - Create task specifies an individual step in a workflow.
 - Set up dependencies or the order in which tasks should be executed.
 
-### Step 9: Copy a DAG file from local machine to Airflow container
+### Step 9: Copy the DAG file from local machine to Airflow container
 ```
 docker cp <source_path> <container_id>:/opt/airflow/dags/
 ```
-### Step 10: Run a DAG file in the Airflow UI
+### Step 10: Run the DAG file in the Airflow UI
 Unpause the DAG
 ```
 docker exec -it <airflow-webserver-container_id> airflow dags unpause <dag_id>
