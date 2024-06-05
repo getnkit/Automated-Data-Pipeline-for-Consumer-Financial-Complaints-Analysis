@@ -29,15 +29,6 @@ pip install -r requirements.txt
 ```
 ### Step 3: Create a MySQL Database with Cloud SQL
 ### Step 4: Import profiled data into MySQL Database using Python
-#### About Python Source Code
-- **Imports necessary modules:** Uses configparser for reading configuration files and pandas for data manipulation.
-- **Specifies the configuration file path:** Defines the path to the configuration file containing database connection details.
-- **Parses the configuration file:** Reads the configuration file to extract database connection parameters.
-- **Retrieves database connection details:** Extracts the database name, username, password, host, and port from the configuration file.
-- **Constructs the database URI:** Builds the connection URI for the MySQL database using the retrieved details.
-- **Reads data from CSV files:** Loads data into Pandas DataFrames.
-- **Imports data into the MySQL database:** Writes the DataFrames to the corresponding tables in the MySQL database, replacing the existing data if the tables already exist.
-
 ### Step 5: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for Data pipeline
 ### Step 6: Install and Configure Airflow Using Docker Container
 Fetching docker-compose.yaml to deploy Airflow on Docker Compose
