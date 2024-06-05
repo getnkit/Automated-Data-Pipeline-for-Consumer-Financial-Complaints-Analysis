@@ -114,11 +114,11 @@ After the workflow process is completed, the data will be loaded into BigQuery.
 - 100,000 is the total number of complaints received.
 - 97.4% of responses by the bank were delivered on time.
 - Around 19,800 complaints were related to Customer Dispute Cases, which is approximately 20% of the total.
-- The top issue for consumers was 'Incorrect information on credit report', followed closely by 'Loan modification, collection, foreclosure' at a similar rate.
-- The products/services with the highest number of complaints were 'Mortgage', 'Debt collection', and 'Credit reporting'.
-- Around 70% of the complaints were submitted via 'the website'.
-- The majority of company responses to consumers had a status of 'Closed with explanation'.
-- For complaints arising from different states, a 'Bubble map' was created, where larger bubbles represent states with a higher number of complaints, and smaller bubbles represent states with fewer complaints. The bubble sizes range from larger to smaller, corresponding to the number of complaints.
+- The top issue for consumers was "Incorrect information on credit report", followed closely by "Loan modification", "collection", "foreclosure" at a similar rate.
+- The products/services with the highest number of complaints were "Mortgage", "Debt collection", and "Credit reporting".
+- Around 70% of the complaints were submitted via "the website".
+- The majority of company responses to consumers had a status of "Closed with explanation".
+- For complaints arising from different states, a "Bubble map" was created, where larger bubbles represent states with a higher number of complaints, and smaller bubbles represent states with fewer complaints. The bubble sizes range from larger to smaller, corresponding to the number of complaints.
 ### [Optional] Step 12: Create CI pipeline using GitHub Actions
 Create a workflow file named ```docker-image.yml``` within the ```.github/workflows/``` directory. This CI pipeline will be triggered whenever a new push is made to the main branch of the repository.
 
