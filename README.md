@@ -104,6 +104,7 @@ Trigger the DAG
 docker exec -it <airflow-webserver-container_id> airflow dags trigger <dag_id>
 ```
 Monitor the DAG
+
 ![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/cb910a1e2309041b475ead4b1249a2b316f8f907/images/Data%20Pipeline%20with%20Airflow.png)
 
 After the workflow process is completed, the data will be loaded into BigQuery.
