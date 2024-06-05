@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build_and_push:
+  build_and_push_custom_image:
     runs-on: ubuntu-latest
     
     steps:
@@ -29,4 +29,4 @@ jobs:
         context: .
         file: ./dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/my-image:latest
+        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/my-image:v1
