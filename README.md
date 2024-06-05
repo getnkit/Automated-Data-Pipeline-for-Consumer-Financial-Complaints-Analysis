@@ -90,11 +90,19 @@ http://localhost:8080/
 - Create task specifies an individual step in a workflow.
 - Set up dependencies or the order in which tasks should be executed.
 
-### Step 9: Copy a DAG file to Airflow container
+### Step 9: Copy a DAG file from local machine to Airflow container
 ```
 docker cp <source_path> <container_id>:/opt/airflow/dags/
 ```
 ### Step 10: Run a DAG file in the Airflow UI
+Unpause the DAG
+```
+docker exec -it <airflow-webserver-container_id> airflow dags unpause <dag_id>
+```
+Trigger the DAG
+```
+docker exec -it <airflow-webserver-container_id> airflow dags trigger <dag_id>
+```
 ![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/cb910a1e2309041b475ead4b1249a2b316f8f907/images/Data%20Pipeline%20with%20Airflow.png)
 
 After the workflow process is completed, the data will be loaded into BigQuery.
