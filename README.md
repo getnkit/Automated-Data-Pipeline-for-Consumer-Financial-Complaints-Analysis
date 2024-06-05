@@ -106,7 +106,7 @@ docker cp <source_path> <container_id>:/opt/airflow/dags/
 ### Step 10: Run a DAG file in the Airflow UI
 ![image](https://github.com/getnkit/End-to-End-Data-Pipeline-for-Consumer-Financial-Complaints/blob/6f7bab431779aaf725adf8c498b1e12103968fdc/images/Data%20Pipeline%20with%20Airflow.png)
 
-![image](https://github.com/getnkit/End-to-End-Data-Pipeline-for-Consumer-Financial-Complaints/blob/b5fc6da3097957e44aeb9381c5c271675aec605b/images/Loaded%20data%20into%20BigQuery.png)
+![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/cb910a1e2309041b475ead4b1249a2b316f8f907/images/Data%20Pipeline%20with%20Airflow.png)
 ### Step 11: Create Consumer Financial Complaints Dashboard using Looker Studio
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/761e209eb5ff580afadef3da504393fcd835949a/images/Consumer%20Financial%20Complaints%20Dashboard.jpg)
 #### Insight Gained
