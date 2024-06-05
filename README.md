@@ -121,7 +121,7 @@ docker cp <source_path> <container_id>:/opt/airflow/dags/
 ### [Optional] Step 12: Create CI pipeline using GitHub Actions
 This pipeline is triggered whenever there is a new push to the main branch of this repository.
 
-![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/862a7781a36225ff3752996057414c1224f2a729/images/CI%20Pipeline.jpg)
+![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/dbe40347512a2795980c0c70ea6bcc1d1f3bbac7/images/CI%20Pipeline.jpg)
 After the job completes, the built Docker image will be pushed to the specified Docker Hub repository.
 Docker images stored in a container registry can be utilized in various ways, including:
 - Deploying containers from the image on local machines or servers
