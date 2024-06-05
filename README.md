@@ -4,7 +4,7 @@ This project focuses on building and automating a data pipeline with Apache Airf
 ## About Dataset
 This dataset consists of real-world complaints about financial products and services, including details such as product type, issue description, company response, and other metadata. These complaints are published after the company responds, or after 15 days from the date of receipt, whichever comes first. By voicing their opinions and complaints, consumers help improve the quality and efficiency of the financial marketplace.
 ## Architecture
-![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/388ee7dd618a0f29b6096de32054d0c32afbbf82/images/Data%20Architecture.png)
+![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/dc1de1502b228873f33218c5365b7ad8f5176fe4/images/Data%20Architecture.png)
 ## Implementation
 ### Step 1: Data profiling using Python on Google Colab
 ### Step 2: Set up a Virtual Environment in Python
@@ -118,7 +118,17 @@ docker cp <source_path> <container_id>:/opt/airflow/dags/
 - Around 70% of the complaints were submitted via 'the website'.
 - The majority of company responses to consumers had a status of 'Closed with explanation'.
 - For complaints arising from different states, a 'Bubble map' was created, where larger bubbles represent states with a higher number of complaints, and smaller bubbles represent states with fewer complaints. The bubble sizes range from larger to smaller, corresponding to the number of complaints.
-### [Optional] Step 12: Create CI pipeline using Github Actions
-โดยที่ workflow จะทำงานก็ต่อเมื่อมีการ push code ขึ้นมาที่ branch master
+### [Optional] Step 12: Create CI pipeline using GitHub Actions
+This pipeline is triggered whenever there is a new push to the main branch of this repository.
 
+![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/862a7781a36225ff3752996057414c1224f2a729/images/CI%20Pipeline.jpg)
+After the job completes, the built Docker image will be pushed to the specified Docker Hub repository.
+Docker images stored in a container registry can be utilized in various ways, including:
+- Deploying containers from the image on local machines or servers
+- Deploying instances or using the image as a base image for instance templates on cloud platforms
+- Deploying containers in a Kubernetes cluster for scalable and orchestrated application deployment
+
+![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/862a7781a36225ff3752996057414c1224f2a729/images/Docker%20Hub%20repository.jpg)
+
+In the early stages of development, building Docker images manually (Step 6) or using Docker Compose directly can be more suitable for flexibility in experimentation and debugging. GitHub Actions can be utilized when the codebase becomes more stable and requires increased automation, which helps save time and reduce errors from repetitive tasks.
 
