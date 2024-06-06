@@ -4,7 +4,7 @@ This project focuses on building and automating a data pipeline with Apache Airf
 ## About Dataset
 This dataset consists of real-world complaints about financial products and services, including details such as product type, issue description, company response, and other metadata. These complaints are published after the company responds, or after 15 days from the date of receipt, whichever comes first. By voicing their opinions and complaints, consumers help improve the quality and efficiency of the financial marketplace.
 ## Architecture
-![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/dc1de1502b228873f33218c5365b7ad8f5176fe4/images/Data%20Architecture.png)
+![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/87589efb434d82f6506f64c1b0b7534727042c2c/images/Data%20Architecture.png)
 ## Implementation
 ### Step 1: Data profiling using Python on Google Colab
 ### Step 2: Set up a Virtual Environment in Python
