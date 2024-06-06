@@ -29,15 +29,6 @@ pip install -r requirements.txt
 ```
 ### Step 3: Create a MySQL Database with Cloud SQL
 ### Step 4: Import profiled data into MySQL Database using Python
-#### About Python Source Code
-- **Imports necessary modules:** Uses configparser for reading configuration files and pandas for data manipulation.
-- **Specifies the configuration file path:** Defines the path to the configuration file containing database connection details.
-- **Parses the configuration file:** Reads the configuration file to extract database connection parameters.
-- **Retrieves database connection details:** Extracts the database name, username, password, host, and port from the configuration file.
-- **Constructs the database URI:** Builds the connection URI for the MySQL database using the retrieved details.
-- **Reads data from CSV files:** Loads data into Pandas DataFrames.
-- **Imports data into the MySQL database:** Writes the DataFrames to the corresponding tables in the MySQL database, replacing the existing data if the tables already exist.
-
 ### Step 5: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for Data pipeline
 ### Step 6: Install and Configure Airflow Using Docker Container
 Fetching docker-compose.yaml to deploy Airflow on Docker Compose
@@ -99,11 +90,21 @@ http://localhost:8080/
 - Create task specifies an individual step in a workflow.
 - Set up dependencies or the order in which tasks should be executed.
 
-### Step 9: Copy a DAG file to Airflow container
+### Step 9: Copy the DAG file from local machine to Airflow container
 ```
 docker cp <source_path> <container_id>:/opt/airflow/dags/
 ```
-### Step 10: Run a DAG file in the Airflow UI
+### Step 10: Run the DAG file in the Airflow UI
+Unpause the DAG
+```
+docker exec -it <airflow-webserver-container_id> airflow dags unpause <dag_id>
+```
+Trigger the DAG
+```
+docker exec -it <airflow-webserver-container_id> airflow dags trigger <dag_id>
+```
+Monitor the DAG
+
 ![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/cb910a1e2309041b475ead4b1249a2b316f8f907/images/Data%20Pipeline%20with%20Airflow.png)
 
 After the workflow process is completed, the data will be loaded into BigQuery.
@@ -115,13 +116,13 @@ After the workflow process is completed, the data will be loaded into BigQuery.
 - 100,000 is the total number of complaints received.
 - 97.4% of responses by the bank were delivered on time.
 - Around 19,800 complaints were related to Customer Dispute Cases, which is approximately 20% of the total.
-- The top issue for consumers was 'Incorrect information on credit report', followed closely by 'Loan modification, collection, foreclosure' at a similar rate.
-- The products/services with the highest number of complaints were 'Mortgage', 'Debt collection', and 'Credit reporting'.
-- Around 70% of the complaints were submitted via 'the website'.
-- The majority of company responses to consumers had a status of 'Closed with explanation'.
-- For complaints arising from different states, a 'Bubble map' was created, where larger bubbles represent states with a higher number of complaints, and smaller bubbles represent states with fewer complaints. The bubble sizes range from larger to smaller, corresponding to the number of complaints.
+- The top issue for consumers was "Incorrect information on credit report", followed closely by "Loan modification", "collection", "foreclosure" at a similar rate.
+- The products/services with the highest number of complaints were "Mortgage", "Debt collection", and "Credit reporting".
+- Around 70% of the complaints were submitted via "the website".
+- The majority of company responses to consumers had a status of "Closed with explanation".
+- For complaints arising from different states, a "Bubble map" was created, where larger bubbles represent states with a higher number of complaints, and smaller bubbles represent states with fewer complaints. The bubble sizes range from larger to smaller, corresponding to the number of complaints.
 ### [Optional] Step 12: Create CI pipeline using GitHub Actions
-This pipeline is triggered whenever there is a new push to the main branch of this repository.
+Create a workflow file named ```docker-image.yml``` within the ```.github/workflows/``` directory. This CI pipeline will be triggered whenever a new push is made to the main branch of the repository.
 
 ![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/dbe40347512a2795980c0c70ea6bcc1d1f3bbac7/images/CI%20Pipeline.jpg)
 After the job completes, the built Docker image will be pushed to the specified Docker Hub repository.
