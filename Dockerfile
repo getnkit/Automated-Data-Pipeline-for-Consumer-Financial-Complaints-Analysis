@@ -8,5 +8,5 @@ COPY requirements.txt /tmp/requirements.txt
 
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
-# This package will be installed in the Docker image, separate from virtual environment (venv)
-RUN pip install --no-cache-dir airflow-provider-great-expectations==0.2.7
+# --no-cache-dir prevents pip from storing the cache of downloaded packages within the Docker image.
+# This helps to reduce the Docker image size and ensure dependency consistency.
