@@ -1,6 +1,8 @@
 # Data Pipeline on GCP for Consumer Financial Complaints Analysis
 ## Project Overview
 This project focuses on building and automating a data pipeline with Apache Airflow. Before ingesting data into the automated data pipeline, it undergoes data profiling (review and cleansing) and is then uploaded to Cloud SQL (MySQL) using a Python. Subsequently, the automated data pipeline extracts data from MySQL, transforms the data, and loads it into Google Cloud Storage (GCS) to ingest the data into BigQuery. Finally, a Consumer Financial Complaints Dashboard is developed using Looker Studio.
+
+Why this project? Because every voice matters. By sharing their experiences, consumers aren't just venting—they're shaping the future of finance. Our analysis of their feedback identifies trends, exposes unfair practices, and guides regulatory actions. This isn't just data; it's a catalyst for a fairer, more transparent financial marketplace.
 ## About Dataset
 This dataset consists of real-world complaints about financial products and services, including details such as product type, issue description, company response, and other metadata. These complaints are published after the company responds, or after 15 days from the date of receipt, whichever comes first. By voicing their opinions and complaints, consumers help improve the quality and efficiency of the financial marketplace.
 ## Data Architecture
