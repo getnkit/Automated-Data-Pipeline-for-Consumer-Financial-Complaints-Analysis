@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ```
 ### Step 3: Create a MySQL Database with Cloud SQL
 ### Step 4: Import profiled data into MySQL Database using Python
-### Step 5: Create a bucket on Google Cloud Storage (GCS) and a dataset on Google BigQuery for Data pipeline
+### Step 5: Create a bucket on Google Cloud Storage (GCS) and a dataset on Google BigQuery
 ### Step 6: Install and Configure Airflow Using Docker Container
 Fetching docker-compose.yaml to deploy Airflow on Docker Compose
 ```
