@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ```
 ### Step 3: Create a MySQL Database with Cloud SQL
 ### Step 4: Import profiled data into MySQL Database using Python
-### Step 5: Create a bucket on Google Cloud Storage (GCS) and a dataset on BigQuery for Data pipeline
+### Step 5: Create a bucket on Google Cloud Storage (GCS) and a dataset on Google BigQuery for Data pipeline
 ### Step 6: Install and Configure Airflow Using Docker Container
 Fetching docker-compose.yaml to deploy Airflow on Docker Compose
 ```
@@ -112,7 +112,7 @@ Monitor the DAG
 After the workflow process is completed, the data will be loaded into BigQuery.
 
 ![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/6f431fbf35a3fe1eb3c7136b952e14f11a8c3baf/images/Loaded%20data%20into%20BigQuery.png)
-### Step 11: Create Consumer Financial Complaints Dashboard using Looker Studio
+### Step 11: Create Consumer Financial Complaints Dashboard using Google Looker Studio
 ![image](https://github.com/getnkit/Automated-ETL-Pipeline-for-Consumer-Financial-Complaints-Analysis/blob/761e209eb5ff580afadef3da504393fcd835949a/images/Consumer%20Financial%20Complaints%20Dashboard.jpg)
 #### Insight Gained
 - 100,000 is the total number of complaints received.
