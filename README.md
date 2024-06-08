@@ -4,7 +4,7 @@ This project focuses on building and automating a data pipeline with Apache Airf
 
 This project harnesses the power of big data to amplify the voices of hundreds of thousands of consumers. The Consumer Financial Protection Bureau (CFPB) receives a deluge of complaints about financial products and services every week. These complaints are a goldmine of insights, revealing pain points in banking, lending, and other financial areas.
 ## About Dataset
-This dataset consists of real-world complaints about financial products and services, including details such as product type, issue description, company response, and other metadata. These complaints are published after the company responds, or after 15 days from the date of receipt, whichever comes first. By voicing their opinions and complaints, consumers help improve the quality and efficiency of the financial marketplace.
+This dataset consists of real-world complaints about financial products and services, including details such as product type, issue description, company response, and other metadata. These complaints are published after the company responds, or after 15 days from the date of receipt, whichever comes first.
 ## Data Architecture
 ![image](https://github.com/getnkit/Data-Pipeline-on-GCP-for-Consumer-Financial-Complaints-Analysis/blob/f6352a626005af8d717d393d387a79290f7e5391/images/Data%20Architecture.png)
 ## Implementation
